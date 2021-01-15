@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 //*******************************version Test Conditional ***************************************
 ///// int main() {
 //     if (__cplusplus == 201703L)
@@ -1779,5 +1782,281 @@
 // 	cout << t;      // // t = 30
  
 // 	return 0;
+// }
+
+// // For Loops practice Same as Last Entry for While Loops // Detailed Breakdown of For Loops !@#$#$%$%^%^%&^%&&^&%#%!@!#!!@#$%%^^&^$@@#
+
+// int main() {
+// 	int N, T, value;
+//     cin >> T;                                   // //                                         1st cin>> 2
+
+//     while(T--) {                                // // 1st Loop                                2nd cin >> 3 / 4
+//         cin >> N;                               // // N = 3 
+
+//         int sum {0};                            
+//         for(int i = 0; i < N; ++i) {
+//             cin >> value;                       //                                              3rd cin>> 1,2,3;  /  1,2,3,4;
+
+//             int result {1};                     // // result = 1/1/1
+//             for(int j = 0; j < i + 1; ++j)      
+//                 result *= value;                // // result = 1/2/4/27 *** (explained below)                    cout # 1  1/4/27
+//                     cout<<result<<"\n";         // // value
+                     
+//                 sum += result;                    // // sum = 1+4/5+27/32                  cout # 2   1/5/32
+//                     cout<<sum<<"\n";
+//         }
+//         cout << sum <<"\n";                     // // sum = 1/5/32          cout  # 3 (Not Visible Until the End) [32] => ONLY OUTPUT
+//     }
+ 
+// 	return 0;
+// }
+
+// /* Two For Loops Explained{
+//     for (int i = 0; i < N; ++i)
+//         i = 0, 1, 2; Because in the exampe => N = 3
+
+//     for (int j = 0; j < i + 1; ++j)
+      
+//         1st input = 1  
+//             j => 0 / only on the first input, because i = 0/ 0 + 1 = 1/ as soon as j = 1 the loop is terminated!
+//                 [1] result *= [1] value = [1]result/ loop performed once only so the {cout<<1}
+
+//         2nd input = 2
+//             j = 0 && j = 1 Both run / because i = 1 / 1 + 1 = 2 / as soon as j = 2 the loop is terminated!
+//                 [1] result *= [2] value  = result[2]/ But the loop runs a second time!
+//                 [2] result *= [2] value = result[4] /  because j now = 2 {cout << 4}
+
+//         3rd input = 3;
+//             j = 0 && j = 1 && j = 2 All run Because i = 2 / 2 + 1 = 3/ as soon as j = 3 the loop is terminated!
+//                 [1] result *= [3] value = [3]result / Loop runs again
+//                 [3] result *= [3] value = [9]result / loop runs again
+//                 [9] result *= [3] value = [27]result / 
+//                 j = 3 / Loop exits {cout << 27}
+
+
+
+            
+// }*/
+
+
+// // Hackerrank code %%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Hackerrank****************************************************************
+
+// int main() {
+//     int a, b;
+//     cin >> a >> b;
+
+//     for (int i = a; i <= b; i++) {
+        
+//         if (i > 0 && i < 2)
+//             cout<<"one\n";
+//         if (i > 1 && i < 3)
+//             cout<<"two\n";
+//         if (i > 2 && i < 4)
+//             cout<<"three\n";
+//         if (i > 3 && i < 5)
+//             cout<<"four\n";
+//         if (i > 4 && i < 6)
+//             cout<<"five\n";
+//         if (i > 5 && i < 7)
+//             cout<<"six\n";
+//         if (i > 6 && i < 8)
+//             cout<<"seven\n";
+//         if (i > 7 && i < 9)
+//             cout<<"eight\n";
+//         if (i > 8 && i < 10)
+//             cout<<"nine\n";
+//         if(i >= 10 && i % 2 == 0)
+//             cout<<"even\n";
+//         else if(i > 10 && i % 2 != 0)
+//             cout<<"odd\n";
+    
+//     } 
+    
+    
+//     return 0;
+// }
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Pair of Numbers Two Ways / Slow 2 Loop Version 1st $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// int main() {
+//     int n, m, sum;
+//     cin >> n >> m >> sum;
+//     int cnt = 0;
+
+//     for (int i = 1; i <= n; ++i)
+//         for(int j = 1; j <= m; ++j)
+//             if(i + j == sum)
+//                 cnt++;
+
+//         cout<<cnt<<"\n";
+//     return 0;
+// }
+
+
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Faster 1 Loop Version $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// /*  ***************************** In this example the second loop is removed by Simple Math Making This Version Much Faster 
+//                                     Than the previous one $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
+// */
+
+
+// int main() {
+//     int n, m, sum;
+//     cin >> n >> m >> sum;
+//     int cnt = 0;
+
+//     for (int i = 1; i <= n; ++i)
+//     {
+
+//         int j = sum - i;                // i + j == sum;
+
+//         if(1 <= j && j <= m)
+//             cnt++;
+
+//     }
+      
+//     cout << cnt << "\n";
+
+//     return 0;
+// }
+
+//*************************************************** Find Triples of Numbers / 3 Loops ************************************************
+
+// int main () {
+//         int n, m, w;
+//         cin >> n >> m >>  w;
+
+//         int cnt = 0;
+        
+//         for (int i = 1; i <= n; ++i)
+//             for (int j = i; j <= m; ++j)
+//                 for (int k = 1; k <= w; ++k)
+//                     if (i + j <= k)
+//                         cnt++;
+        
+//         cout << cnt <<"\n";
+        
+    
+    
+    
+//     return 0;
+// }
+
+// // **************************************** Find Triples Better 2 Loop Version ********************************************
+
+
+// int main () {
+//         int n, m, w;
+//         cin >> n >> m >>  w;
+
+//         int cnt = 0;
+        
+//         for (int i = 1; i <= n; ++i) 
+//             for (int j = i; j <= m; ++j){
+
+//                 int k = i + j;
+
+//                 if (1 <= k && k <= w) 
+//                     cnt += w - k + 1;
+                
+//             }
+                
+//                 cout << cnt << "\n";
+            
+        
+//         return 0;
+
+// }
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Fibonacci Sequence / Couldn't Figure Out $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// int main() {
+//     int n = 10, a = 0, b = 1;
+
+//     cout<<a<<" "<<b<< " ";
+
+//     for (int cnt = 2; cnt < n; ++cnt)
+//     {
+//         int c = a + b;
+//         a = b;
+//         b = c;
+
+//         cout<<c<<" ";
+//     }
+//     return 0;
+// }
+
+/* ******************************************** While Loops Homework Repeated with For Loops ********************************************** 
+// ********************************************** 1st Problem print Range / My Solution Works ************************************************
+// */
+// int main () {
+//     int x, y;
+//     cin >> x >> y;
+
+//     for (int i = x; i <= y; ++i)
+
+//         cout<<i<<" ";
+// return 0;
+// }
+
+// ************************************ Line of Characters For Loop % Works Well ***************************************************
+
+// int main() {
+//     int x;
+//     char y;
+
+//     cin >> x >> y;
+
+//     for (int i = 1; i <= x; ++i)
+//     {
+//         cout<<y;
+//     }
+    
+//     return 0;
+// }
+
+// // ************************************* %% Left Angled Triangle / My Solution For Loop %% Works Well ***************************
+
+// int main() {
+//     int n;
+//     cin>>n;
+    
+
+//     for (int i = 1; i <= n; ++i){
+//         int stars_count = i;
+        
+//         for(int j = 0; j < stars_count; j++){
+//             cout<<'*'<<" ";
+//         }
+//         cout<<"\n";
+//     }
+
+
+
+// return 0;
+// }
+
+
+// *********************************** %% Right Angled Triangle %% My Solution Works Well %%**********************************
+
+
+// int main() {
+//     int n;
+//     cin>>n;
+    
+
+//     for (int i = n; i >= 0; --i){
+//         int stars_count = i;
+        
+//         for(int j = 0; j < stars_count; j++){
+//             cout<<'*'<<" ";
+//         }
+//         cout<<"\n";
+//     }
+
+
+
+// return 0;
 // }
 
