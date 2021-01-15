@@ -2060,3 +2060,104 @@ using namespace std;
 // return 0;
 // }
 
+// // ***************** Print A * Diamond %% For Loop Version %% Works Well %% My Answer %% ***************************
+
+// int main() {
+//     int n, row = n;
+//     cin>>n;
+
+//     for (int i = 1; i <= n; ++i)
+//     {
+//         int str_cnt = i;
+//         row--;
+
+//         for (int k = 0; k < row -1; ++k)
+//         {
+//             cout<<" ";
+//         }
+//         for (int j = 0; j < str_cnt; ++j)
+//         {
+//             cout<<'*'<<" ";
+//         }
+//         cout<<"\n";
+//     }
+//         int a = n;
+//         int b = row;
+//         for (int i = a; i > 0; --i)
+//     {
+//         int str_cnt = i;
+//         b++;
+
+//         for (int k = 1; k < b - 1; ++k)
+//         {
+//             cout<<" ";
+//         }
+//         for (int j = 0; j < str_cnt; ++j)
+//         {
+//             cout<<'*'<<" ";
+//         }
+//         cout<<"\n";
+//     }
+
+
+// return 0;
+// }
+
+// ***************************************** Special Average / With For Loops %% My Answer %% *******************************************
+
+// int main() {
+//     int n, m;
+//     cin>>n;
+//     int cnt = 0, even_cnt = 0, odd_cnt = 0;
+//     double even_sum = 0.0, odd_sum = 0.0;
+    
+//     for (int i = 0; i < n; ++i)
+//     {
+//         cin>>m;
+//         cnt++;
+//         if(cnt % 2 == 0){
+//             even_sum += m;
+//             even_cnt++;
+//         }    
+        
+//         if (cnt % 2 != 0){
+//             odd_sum += m;
+//             odd_cnt++;
+//         }     
+//         cout<<odd_sum<<" "<<even_sum<<"\n";
+
+//     }
+//     cout<<(odd_sum/odd_cnt)<<" "<<(even_sum/even_cnt)<<"\n";
+    
+//     return 0;
+// }
+
+//  ********************************** Special Multiples / For Loops % My Answer % **************************************************
+
+// int main() {
+//     int n;
+//     cin>>n;
+
+//     for (int i = 0; i < n; ++i)
+//     {
+//         if (i % 3 == 0 && i % 4 == 0 || i % 8 == 0)
+//             cout<<i<<" ";
+//     }
+    
+    
+//     return 0;
+// }
+
+// ********************************************** Special Multiples 2 / For Loops % My Answer ***************************************
+
+// int main(){
+//    int n;
+//    cin>>n;
+
+//    for(int i = 0; i < n * 4; ++i) 
+//    {
+//        if(i % 3 == 0 && i % 4 != 0)
+//             cout<<i<<" "; 
+//    }
+//    return 0;
+// }
