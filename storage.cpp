@@ -1987,6 +1987,23 @@ using namespace std;
 //     return 0;
 // }
 
+// *****************************************Fibonacci Sequence with an Input **************************************
+
+// int main() {
+//     int n;
+//     cin>>n;
+//     int a {0}, b {1};
+    
+//     for (int i = 2; i < n; ++i){
+//         int c = a + b;
+//         a = b;
+//         b = c;
+
+//         cout<<c<<" ";
+//     }
+//     return 0;
+// }
+
 /* ******************************************** While Loops Homework Repeated with For Loops ********************************************** 
 // ********************************************** 1st Problem print Range / My Solution Works ************************************************
 // */
@@ -2161,3 +2178,254 @@ using namespace std;
 //    }
 //    return 0;
 // }
+
+// // ********************************* Minimum of Values / For Loops %%My Answer%% *******************************************************
+
+// int main() {
+//     int t, n, a;
+//     cin>>t;
+    
+//     for (int i = t; i > 0; --i){
+//         cin>>n;
+//         t--;
+
+//         for(int j = n; j > 0; --j)
+//         {
+//             cin>>a;
+//             int x = 0;
+//             if (a < x) {
+//                 a = x;
+//             }
+            
+//         }
+//         cout << a << " ";
+//     }
+//     return 0;
+// }
+
+// ***************************** %% Multiplication Table / For Loop %% My Answer %% ****************************************
+
+// int main() {
+//     int n, m;
+//     cin>>n>>m;
+    
+//     for (int i = 1; i <= n; ++i){
+//             for (int j = 1; j <=m; ++j)
+//         {
+//             cout<<i<<" "<<'x'<<" "<<j<<" "<<'='<<" "<<(i*j)<<"\n";
+//         }
+//     }
+//     return 0;
+// }
+
+
+//     // ************************************ Print an X Instructor Answer / Couldn't Solve **************************
+
+//    int main() {
+// 	int n;
+
+// 	cin>>n;
+
+// 	for (int i = 0; i < n; ++i) {
+// 		for (int j = 0; j < n; ++j) {
+// 			if(i == j || n-i-1 == j)
+// 				cout<<"*";
+// 			else
+// 				cout<<" ";
+// 		}
+// 		cout<<"\n";
+// 	}
+
+// 	return 0;
+// }
+
+// ***************************** $$ Special Sum: For Loops / Instructor Answer $$ **********************************************
+
+// int main(){
+//     int n;
+//     int cnt = n, t, value;
+
+//     cin>>t;
+//     while(t--){
+//         cin>>n;
+        
+//         int sum = 0; 
+//         for (int i = 0; i < n; ++i) {
+//             cin>> value; 
+
+//             int result = 1; 
+//             for (int j = 0; j < i + 1; ++j) 
+//                 result *= value;
+//             sum += result;
+//             }
+//             cout<< sum << "\n";
+//         }
+//         return 0;
+
+//     }
+
+// // ***************************************Find Special Pairs %% My Answer ************************************************
+
+// int main () {
+//     int cnt = 0;
+//     for (int x = 50; x <= 300; ++x)
+//         for (int y = 70; y <= 400; ++y){
+//             if (x < y && (x + y) % 7 == 0)
+//                 cnt++;
+            
+//         }
+//         cout<<cnt;
+   
+//     return 0;
+// }
+
+// // ***************************************Find Special Pairs $$ Instructor Answer ************************************************
+
+
+// int main() {
+// 	int count = 0;
+
+// 	for (int x = 50; x <= 300; ++x) {
+// 		for (int y = 70; y <= 400; ++y) {
+// 			if (x < y && ((x + y) % 7 == 0)) {
+// 				//cout<<x<<" "<<y<<" "<<x+y<<"\n";
+// 				++count;
+// 			}
+// 		}
+// 	}
+// 	cout<<count<<"\n";
+
+// 	return 0;
+// }
+
+// // ******************************* $$$$$$ BEST Answer / More EFFICIENT **************************************************************
+
+   
+// int main() {
+// 	int count = 0;
+
+// 	for (int x = 50; x <= 300; ++x) {
+// 		// Let's speed it
+// 		// We can always start from the right condition maximum(70, x+1)
+// 			// Saves some Y iterations
+// 			// Remove the x < y condition
+// 		int start = 70;
+
+// 		if (start < x+1)
+// 			start = x+1;
+
+// 		for (int y = start; y <= 400; ++y) {
+// 			if ((x + y) % 7 == 0) {
+// 				//cout<<x<<" "<<y<<" "<<x+y<<"\n";
+// 				++count;
+// 			}
+// 		}
+// 	}
+// 	cout<<count<<"\n";
+
+// 	return 0;
+// }
+
+// *************************************************Find All Quadruples %% My Answer %% *************************************************
+
+// int main() {
+//     int cnt = 0;
+
+//     for (int a = 1; a <= 200; ++a)
+//         for (int b = 1; b <= 200; ++b)
+//             for (int c = 1; c <= 200; ++c){
+//                 int d = a + b - c;
+//                 if (1 <= d && d <= 200)
+//                     cnt++;
+//             }
+        
+    
+        
+//     cout<<cnt<<"\n";
+//     return 0;
+// }
+
+// // *************************************************Find All Quadruples %% Instructor  Answer %% *****************************************
+// // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ EXACT MATCH TO MINE $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// int main() {
+// 	int count = 0;
+
+// 	for (int a = 1; a <= 200; ++a) {
+// 		for (int b = 1; b <= 200; ++b) {
+// 			for (int c = 1; c <= 200; ++c) {
+// 				int d = a + b - c;
+
+// 				if(1 <= d && d <= 200)
+// 					count++;
+// 			}
+// 		}
+// 	}
+
+// 	cout << count << "\n";
+
+// 	return 0;
+// }
+
+// ******************************************* $$ Prime Number $$ Instructor Answer $$ Mine Failed **************************************
+
+// int main() {
+// 	int number;
+
+// 	cin >> number;
+
+// 	if (number == 1)
+// 		cout << "NO\n";
+// 	else {
+// 		bool is_ok = true;
+
+// 		for (int i = 2; i < number; ++i) {
+// 			if (number % i == 0) {
+// 				is_ok = false;
+// 				break;
+// 			}
+// 		}
+
+// 		if (is_ok)
+// 			cout << "YES";
+// 		else
+// 			cout << "NO";
+// 	}
+
+// 	return 0;
+// }
+
+	// **************************** Print All Prime Numbers / Instructor Answer *************************************************
+    
+//     int main() {
+// 	int target;
+// 	bool first_print = true;
+
+// 	cin >> target;
+
+// 	for (int number = 2; number <= target; ++number) {
+// 		bool is_ok = true;
+
+// 		for (int i = 2; i < number; ++i) {
+// 			// cout<<number<<'!'<<"\n";
+// 			if (number % i == 0) {
+// 				is_ok = false;
+// 				break;
+// 			}
+// 		}
+
+// 		if (is_ok)
+// 		{
+// 			if(!first_print)
+// 				cout<<",";
+
+// 			cout << number;
+
+// 			first_print = false;
+// 		}
+// 	}
+
+// 	return 0;
+// }
+
+

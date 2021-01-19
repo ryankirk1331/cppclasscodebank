@@ -1,27 +1,37 @@
 #include <iostream>
 using namespace std;
-
-// ********************************************** Reverse Number/ For Loops % My Answer ***************************************
-
-int main(){
-    int n;
-    cin>>n;
-
     
-    int number = 0;
+// 	// **************************** Print All Prime Numbers / Instructor Answer *************************************************
+    
+//     int main() {
+// 	int target;
+// 	bool first_print = true;
 
-    for (int i = 0; i <= n; ++i){
-        int last_digits = n % 10;
-        n /= 10;
-        number = number * 10 + last_digits;
+// 	cin >> target;
 
-    }
-    cout<<number<<" "<<number * 3<<"\n";
+// 	for (int number = 2; number <= target; ++number) {
+// 		bool is_ok = true;
 
-   return 0;
-}
+// 		for (int i = 2; i < number; ++i) {
+// 			// cout<<number<<'!'<<"\n";
+// 			if (number % i == 0) {
+// 				is_ok = false;
+// 				break;
+// 			}
+// 		}
 
+// 		if (is_ok)
+// 		{
+// 			if(!first_print)
+// 				cout<<",";
 
+// 			cout << number;
 
+// 			first_print = false;
+// 		}
+// 	}
+
+// 	return 0;
+// }
 
 
